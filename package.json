@@ -1,0 +1,44 @@
+{
+  "name": "kleis",
+  "displayName": "Kleis Language Support",
+  "description": "Syntax highlighting for the Kleis formal verification language",
+  "version": "0.98.0",
+  "publisher": "eatikrh",
+  "author": "Engin Atik <eatik@redhat.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eatikrh/vscode-kleis"
+  },
+  "homepage": "https://kleis.io",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "kleis",
+    "formal verification",
+    "type system",
+    "mathematics",
+    "theorem proving"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "kleis",
+        "aliases": ["Kleis", "kleis"],
+        "extensions": [".kleis"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "kleis",
+        "scopeName": "source.kleis",
+        "path": "./syntaxes/kleis.tmLanguage.json"
+      }
+    ]
+  }
+}
