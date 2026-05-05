@@ -2,40 +2,73 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Kleis",
   "scopeName": "source.kleis",
-  "version": "0.98.0",
-  "fileTypes": ["kleis"],
+  "fileTypes": [
+    "kleis"
+  ],
   "patterns": [
-    { "include": "#comments" },
-    { "include": "#strings" },
-    { "include": "#numbers" },
-    { "include": "#booleans" },
-    { "include": "#symbolic-constants" },
-    { "include": "#named-arguments" },
-    { "include": "#constructors" },
-    { "include": "#types" },
-    { "include": "#quantifiers" },
-    { "include": "#keywords" },
-    { "include": "#annotations" },
-    { "include": "#operators" },
-    { "include": "#greek-types" },
-    { "include": "#variables" },
-    { "include": "#identifiers" }
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#booleans"
+    },
+    {
+      "include": "#symbolic-constants"
+    },
+    {
+      "include": "#named-arguments"
+    },
+    {
+      "include": "#constructors"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#quantifiers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#annotations"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#greek-types"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#identifiers"
+    }
   ],
   "repository": {
-
     "named-arguments": {
       "comment": "Named arguments in function calls: name = value (v0.96)",
       "patterns": [
         {
           "match": "\\b([a-z_][A-Za-z0-9_]*)\\s*(=)(?!=)",
           "captures": {
-            "1": { "name": "variable.parameter.named.kleis" },
-            "2": { "name": "keyword.operator.assignment.named-arg.kleis" }
+            "1": {
+              "name": "variable.parameter.named.kleis"
+            },
+            "2": {
+              "name": "keyword.operator.assignment.named-arg.kleis"
+            }
           }
         }
       ]
     },
-
     "comments": {
       "patterns": [
         {
@@ -49,7 +82,6 @@
         }
       ]
     },
-
     "strings": {
       "patterns": [
         {
@@ -65,7 +97,6 @@
         }
       ]
     },
-
     "numbers": {
       "patterns": [
         {
@@ -74,7 +105,6 @@
         }
       ]
     },
-
     "booleans": {
       "patterns": [
         {
@@ -83,7 +113,6 @@
         }
       ]
     },
-
     "symbolic-constants": {
       "patterns": [
         {
@@ -100,7 +129,6 @@
         }
       ]
     },
-
     "types": {
       "patterns": [
         {
@@ -113,7 +141,6 @@
         }
       ]
     },
-
     "quantifiers": {
       "patterns": [
         {
@@ -131,7 +158,6 @@
         }
       ]
     },
-
     "keywords": {
       "patterns": [
         {
@@ -152,7 +178,6 @@
         }
       ]
     },
-
     "annotations": {
       "patterns": [
         {
@@ -164,26 +189,25 @@
           "begin": "@\\{",
           "end": "\\}",
           "patterns": [
-            { "include": "$self" }
+            {
+              "include": "$self"
+            }
           ]
         }
       ]
     },
-
     "operators": {
       "patterns": [
         {
           "name": "keyword.operator.kleis",
           "match": "(==|!=|<=|>=|->|=>|→|⇒|⟹|⊗|∘|∗|×|·|\\+|-|\\*|/|\\^|=|≠|<|>|≤|≥|≈|≡|~|∈|∉|⊂|⊆|∧|∨|¬|∇|∫|√|!|†|ᵀ|\\^T)"
-        }
-        ,
+        },
         {
           "name": "keyword.operator.unicode.kleis",
           "match": "(⊕|⊙|⊛|⨂|⨁|⋆|•|∪|∩|⊖|⊘|⨀|⨄|⊚|⊝|⊞|⊟|⊠|⊡|⊻|⊼|⊽|⊓|⊔|⩒|⩓|⨂|⋅|◦)"
         }
       ]
     },
-
     "constructors": {
       "patterns": [
         {
@@ -192,7 +216,6 @@
         }
       ]
     },
-
     "greek-types": {
       "patterns": [
         {
@@ -201,7 +224,6 @@
         }
       ]
     },
-
     "variables": {
       "patterns": [
         {
@@ -210,7 +232,6 @@
         }
       ]
     },
-
     "identifiers": {
       "patterns": [
         {
